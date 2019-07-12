@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distance: MyString
+  date: MyString
+  comment: MyString
+  user_id: MyString
+
+two:
+  distance: MyString
+  date: MyString
+  comment: MyString
+  user_id: MyString
