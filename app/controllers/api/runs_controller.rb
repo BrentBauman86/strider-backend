@@ -3,9 +3,15 @@ class Api::RunsController < ApplicationController
 
   # GET /runs
   def index
-    @runs = Run.all
+    if logged_in?
+    @runs = current_user.runs 
 
     render json: @runs
+    else 
+      render json: {
+        error: "you must be logged in to see trips"
+      }
+    end 
   end
 
   # GET /runs/1

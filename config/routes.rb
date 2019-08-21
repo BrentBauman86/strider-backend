@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get '/api/login', to: 'sessions#create'
   post '/api/login', to: "sessions#create"
   delete '/api/logout', to: "sessions#destroy"
-
+  get "/api/get_current_user", to: "api/sessions#get_current_user"
 
   namespace :api do 
     resources :runs
