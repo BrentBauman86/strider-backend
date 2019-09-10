@@ -6,10 +6,10 @@ class Api::RunsController < ApplicationController
     if logged_in?
     @runs = current_user.runs 
 
-    render json: @runs
+    render json: RunSerializer.new(@runs)
     else 
       render json: {
-        error: "you must be logged in to see trips"
+        error: "you must be logged in to see runs"
       }
     end 
   end
